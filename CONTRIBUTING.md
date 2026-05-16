@@ -2,6 +2,35 @@
 
 Thank you for your interest in contributing to Nodots Backgammon. This document provides guidelines and information for contributors.
 
+## About This Fork
+
+This is the **bitcoiners/gnubg-hints** fork of [nodots/gnubg-hints](https://github.com/nodots/gnubg-hints), maintained for GPL compliance by the [Backgammon Platform](https://github.com/bitcoiners/backgammon) project.
+
+### Why This Fork Exists
+
+`@nodots/gnubg-hints` is a Node.js native addon that links against the GNU Backgammon (gnubg) C library, which is licensed under **GPL-3.0**. Our platform uses this package as a sidecar AI service. Under GPLv3 Section 6, when we distribute object code (via npm or Docker images), we must also provide access to the corresponding source code.
+
+This public fork satisfies that requirement:
+
+- **Source availability**: The complete source code for the GPL component is always available at `https://github.com/bitcoiners/gnubg-hints`
+- **Corresponding source**: We track the upstream `nodots/gnubg-hints` repository and merge upstream changes regularly
+- **License preservation**: The GPL-3.0 license (see `LICENSE` and `COPYING`) is preserved unchanged
+- **Build reproducibility**: The native addon can be rebuilt from this source using `npm run build`
+
+### Fork Maintenance Policy
+
+1. **Sync with upstream**: We regularly merge changes from `nodots/gnubg-hints` to stay current
+2. **No divergent changes**: We do not maintain a separate codebase — all bug fixes and features go upstream first
+3. **Public visibility**: This repository remains public to satisfy GPL source distribution requirements
+4. **Version tracking**: Our npm package versions match upstream releases
+
+### Reporting Issues
+
+- **Upstream bugs**: Report at [nodots/gnubg-hints/issues](https://github.com/nodots/gnubg-hints/issues)
+- **Fork-specific issues** (build failures, sync problems): Report at [bitcoiners/gnubg-hints/issues](https://github.com/bitcoiners/gnubg-hints/issues)
+
+---
+
 ## Project Structure
 
 This is a **multi-repo ecosystem**, not a monorepo. Each package has its own GitHub repository:
